@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        div {
+            font-size: 12px;
+        }
+
+        @media print {
+
+            div {
+                font-size: 80px;
+                width: 100px;
+                height: 100px;
+                background-color: #f0f;
+            }
+        }
+
+        @media screen {
+
+            div {
+                font-size: 32px;
+                width: 200px;
+                height: 200px;
+                background-color: #ff0;
+            }
+        }
+
+        @media all {                            /* current selected */
+
+            div {
+                font-size: 16px;
+                width: 300px;
+                height: 300px;
+                background-color: #0ff;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+<div>hello world</div>
+
+
+
+
+</body>
+</html>

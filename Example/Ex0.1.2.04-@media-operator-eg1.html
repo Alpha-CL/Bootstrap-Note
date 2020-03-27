@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        .demo {
+            padding: 50px 0;
+            border: 1px solid black;
+        }
+
+        .demo:after {
+            content: "hello world";
+        }
+
+        @media all and (max-width: 1000px) {
+
+            .demo {
+                background-color: green;
+            }
+
+            .demo:after {
+                content: "当 screen.width < 1000px 时触发";
+            }
+        }
+
+        @media all and (min-width: 900px) {
+
+            .demo {
+                background-color: blue;
+            }
+
+            .demo:after {
+                content: "当 900px < screen.width 时触发";
+            }
+        }
+
+        @media all and (max-width: 800px) {
+
+            .demo {
+                background-color: red;
+            }
+
+            .demo:after {
+                content: "当 screen.width < 800px 时触发";
+            }
+        }
+
+        @media all and (max-width: 700px) {
+
+            .demo {
+                background-color: gray;
+            }
+
+            .demo:after {
+                content: "当 screen.width < 700px 时触发";
+            }
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="demo"></div>
+
+
+</body>
+</html>

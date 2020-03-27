@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+    <style>
+
+        body {
+            margin-bottom: 1000px;
+        }
+
+        .row div {
+            height: 40px;
+
+            line-height: 40px;
+            background-color: green;
+            border: 1px solid #000;
+            color: #fff;
+        }
+
+        .v-align {
+            height: 100px;
+            background-color: rgba(255, 0, 0, .1);
+            border: 1px solid rgba(255, 0, 0, .6);
+            margin: 10px -15px;
+        }
+
+        .v-align div {
+            height: 40px;
+            line-height: 40px;
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid rgba(86, 61, 124, .3);
+            color: #333;
+        }
+
+        .v-align .v-active {
+            color: #fff;
+            background-color: green;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+
+    <div class="row v-align align-items-start">
+        <div class="col">align-items</div>
+        <div class="col">align-items</div>
+        <div class="col">align-items</div>
+    </div>
+
+    <div class="row v-align align-items-center">
+        <div class="col">align-items</div>
+        <div class="col">align-items</div>
+        <div class="col">align-items</div>
+    </div>
+
+    <div class="row v-align align-items-end">
+        <div class="col align-self-end">align-items</div>
+        <div class="col">align-items</div>
+        <div class="col">align-items</div>
+    </div>
+
+
+    <div class="row mt-5 v-align align-items-end">
+        <div class="col align-self-start">align-self</div>
+        <div class="col align-self-center">align-self</div>
+        <div class="col align-self-end">align-self</div>
+    </div>
+
+
+    <div class="row mt-5 v-align justify-content-start">
+        <div class="col-4">justify-content</div>
+        <div class="col-4">justify-content</div>
+    </div>
+    <div class="row mt-5 v-align justify-content-center">
+        <div class="col-4">justify-content</div>
+        <div class="col-4">justify-content</div>
+    </div>
+    <div class="row mt-5 v-align justify-content-end">
+        <div class="col-4">justify-content</div>
+        <div class="col-4">justify-content</div>
+    </div>
+    <div class="row mt-5 v-align justify-content-around">
+        <div class="col-4">justify-content</div>
+        <div class="col-4">justify-content</div>
+    </div>
+    <div class="row mt-5 v-align justify-content-between">
+        <div class="col-4">justify-content</div>
+        <div class="col-4">justify-content</div>
+    </div>
+
+
+    <div class="row mt-5">
+        <div class="col">col - 1</div>
+        <div class="col">col - 2</div>
+        <div class="col">col - 3</div>
+        <div class="col">col - 4</div>
+        <div class="col">col - 5</div>
+        <div class="col">col - 6</div>
+        <div class="col">col - 7</div>
+        <div class="col">col - 8</div>
+        <div class="col">col - 9</div>
+        <div class="col">col - 10</div>
+        <div class="col">col - 11</div>
+        <div class="col">col - 12</div>
+    </div>
+    <div class="row v-align">
+        <div class="col">col - 1</div>
+        <div class="col">col - 2</div>
+        <div class="col">col - 3</div>
+        <div class="col">col - 4</div>
+        <div class="col v-active order-1">col - 5</div>
+        <div class="col">col - 6</div>
+        <div class="col">col - 7</div>
+        <div class="col">col - 8</div>
+        <div class="col v-active order-3">col - 9</div>
+        <div class="col">col - 10</div>
+        <div class="col">col - 11</div>
+        <div class="col">col - 12</div>
+    </div>
+    <div class="row v-align">
+        <div class="col">col - 1</div>
+        <div class="col">col - 2</div>
+        <div class="col">col - 3</div>
+        <div class="col">col - 4</div>
+        <div class="col">col - 5</div>
+        <div class="col">col - 6</div>
+        <div class="col">col - 7</div>
+        <div class="col">col - 8</div>
+        <div class="col v-active order-sm-2">col - 9</div>
+        <div class="col">col - 10</div>
+        <div class="col">col - 11</div>
+        <div class="col">col - 12</div>
+    </div>
+    <div class="row v-align">
+        <div class="col">col - 1</div>
+        <div class="col">col - 2</div>
+        <div class="col">col - 3</div>
+        <div class="col v-active order-last">col - 4</div>
+        <div class="col">col - 5</div>
+        <div class="col">col - 6</div>
+        <div class="col">col - 7</div>
+        <div class="col">col - 8</div>
+        <div class="col v-active order-first">col - 9</div>
+        <div class="col">col - 10</div>
+        <div class="col">col - 11</div>
+        <div class="col">col - 12</div>
+    </div>
+
+
+    <div class="row mt-5 v-align">
+        <div class="col-4">col-4</div>
+        <div class="col-4 offset-4">col-4 offset-4</div>
+    </div>
+    <div class="row mt-5 v-align">
+        <div class="col-3 offset-3">col-3 offset-3</div>
+        <div class="col-3 offset-3">col-3 offset-3</div>
+    </div>
+    <div class="row mt-5 v-align">
+        <div class="col-sm-5 col-md-6">col-sm-5 col-md-6</div>
+        <div class="col-sm-5 offset-sm-3 col-md-6 offset-md-5">if(col-sm-5){offset-sm-3}  if(col-md-6){offset-md-5}</div>
+    </div>
+
+
+    <div class="row mt-5 v-align">
+        <div class="col-4">col-4</div>
+        <div class="col-4 ml-auto">col-4 ml-auto</div>
+    </div>
+
+    <div class="row mt-3 v-align">
+        <div class="col-md-3 ml-md-auto">col-md-3 ml-md-auto</div>
+        <div class="col-md-3 ml-md-auto">col-md-3 ml-md-auto</div>
+    </div>
+
+    <div class="row mt-3 v-align">
+        <div class="col-auto mr-auto">col-auto mr-auto</div>
+        <div class="col-auto">col-auto</div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-9" style="height: 150px; background-color: blue">
+            father col-9
+            <div class="row justify-content-end">
+                <div class="col-8" style="height: 60px">son col8</div>
+                <div class="col-4" style="height: 60px">son col4</div>
+            </div>
+        </div>
+        <div class="col-3" style="height: 150px; background-color: #0c5460;">father col-3</div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
