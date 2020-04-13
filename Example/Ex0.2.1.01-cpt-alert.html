@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="alert alert-primary mt-3">
+        This is alert <a href="#" class="alert-link">This is alert-link</a>
+    </div>
+
+    <div class="alert alert-success">
+        <h4  class="alert-heading">This is alert-heading</h4>
+        <p>The are description</p>
+        <hr>
+        <p>The are description</p>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible show hide">
+        This is warning-alert
+        <button  class="close" data-dismiss="alert">&times;</button>
+    </div>
+
+
+    <div class="alert alert-danger alert-dismissible show hide myAlert" role="alert">
+        <!--.show and .hide must all add-->
+
+        <!--colorName: primary, secondary, success, danger, warning, info, light, dark;-->
+        <!--<h4 class="alert-heading"></h4>-->
+        <!--<a class="alert-link" href="#">-->
+        <!--<hr/>-->
+
+        This is alert content area
+
+        <!--<button  class="close" data-dismiss="alert">&times;</button> &lt;!&ndash; right close btn &ndash;&gt;-->
+    </div>
+
+    <button class="button closeBtn">close top alert</button>
+
+
+</div>
+
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script>
+
+
+    /**
+     * alert
+     *
+     * 警示条
+     */
+
+
+    $('.closeBtn').on('click', function () {
+
+        $('.myAlert').alert('close');
+    });
+
+    $('.myAlert').on('close.bs.alert', function () {
+
+        alert('close 方法被调用了');
+    });
+
+    $('.myAlert').on('closed.bs.alert', function () {
+
+        alert('alert 关闭了');
+    });
+
+
+</script>
+
+
+
+</body>
+</html>
