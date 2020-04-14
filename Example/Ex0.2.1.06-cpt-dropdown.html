@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="row mt-5">
+        <div class="col">
+
+            <!-- 调用 show/./.bs.dropdown 事件需要把 id 设置在其父级身上 -->
+            <div class="dropdown" id="myDropdown1">
+
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Dropdown button
+                </button>
+
+                <!-- 自定义 js 时，需要设置 data-reference="parent" -->
+                <div class="dropdown-menu" data-reference="parent">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+
+<script>
+
+
+    $('.myBtn').click(function () {
+
+        /**
+         * 无法来回切换           // 原因未知
+         *
+         *
+         */
+
+        // $('.dropdown-menu').dropdown('toggle');
+
+        /**
+         * toggle(fn1(), fn2());                // 解决方案
+         *
+         * jQuery 中的方法，在再次触发在 fn1(); 和 fn2(); 中切换
+         */
+
+        $('.dropdown-menu').toggle(function () {
+
+            $(this).dropdown('show');
+
+        }, function () {
+
+            $(this).dropdown('hide');
+        });
+    });
+
+
+    $('#myDropdown1').on('show.bs.dropdown', function () {          // 调用show实例方法时，将立即触发此事件
+
+        console.log('调用 show 时');
+
+    }).on('shown.bs.dropdown', function () {                        // 当下拉菜单对用户可见时将触发此事件（将等待CSS转换完成）​​
+
+        console.log('完全显示 时');
+
+    }).on('hide.bs.dropdown', function () {                         // 调用hide实例方法后，立即触发此事件
+
+        console.log('调用 hide 时');
+
+    }).on('hiden.bs.dropdown', function () {                        // 当下拉菜单完成对用户的隐藏操作时，将触发此事件（将等待CSS转换完成
+
+        console.log('完全隐藏 时');
+    });
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
